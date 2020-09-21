@@ -1,7 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter, Route} from 'react-router-dom';
 import './App.css';
 import data from './data';
+import Home from './Components/Home';
+import Product from './Components/Product';
+
+
+
+
 function App() {
   
   const openMenu= () => {
@@ -44,20 +50,7 @@ function App() {
              <div className='content'>
                <Route path='/products/:id' component={Product}/>
                <Route path='/' exact={true} component={Home}/>
-               <ul className='products'>
-                 {
-                   data.products.map(product => 
-               
-                   <li>
-                       <div className='product'>
-                       <img class="product-image" src= {product.image} alt="product"/>
-                       <div class="product-name"><a  href="product.html"> {product.name} </a></div>
-                       <div class="product-brand"> {product.brand}</div>
-                       <div class="price"> {product.price}</div>
-                       </div>
-                   </li>)
-                     }
-               </ul>
+             
              </div>
          </main>
          <footer class="footer">
