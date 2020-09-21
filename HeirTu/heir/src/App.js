@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 import data from './data';
 import Home from './Components/Home';
@@ -28,7 +28,8 @@ function App() {
                   <button onClick={openMenu}>
                       &#9776;
                   </button>
-              <a href="index.html">Heir Tu</a> 
+                  <Link to='/'> Heir TU</Link>
+              {/* <a href="Home.js">Heir Tu</a>  */}
               </div>
               <div class="header-links">
                <a href="cart.html">Cart</a> 

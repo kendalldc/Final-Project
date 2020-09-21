@@ -2,12 +2,12 @@ import React from 'react';
 
 
 
-function Product(){
-    return(
-        <div>
-        <h2> Product</h2>
-     </div>
-    )
+function Product(props){
+  console.log(props.match.params.id)
+  
+  
+    return <div> Product</div>
+    
 }
 
 
