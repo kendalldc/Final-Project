@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import data from './data';
 function App() {
   
   const openMenu= () => {
@@ -13,6 +13,7 @@ function App() {
   }
   
   return (
+    <BrowserRouter>
     <div class="grid-container">
 
      
@@ -41,54 +42,30 @@ function App() {
          
          <main className='main'>
              <div className='content'>
+               <Route path='/products/:id' component={Product}/>
+               <Route path='/' exact={true} component={Home}/>
                <ul className='products'>
+                 {
+                   data.products.map(product => 
+               
                    <li>
                        <div className='product'>
-                       <img class="product-image" src="Images/mini-skirt.jpg" alt="product"/>
-                       <div class="product-name"><a  href="product.html">Pleated Skirt</a></div>
-                       <div class="product-brand"> Azuri</div>
-                       <div class="price"> $600</div>
+                       <img class="product-image" src= {product.image} alt="product"/>
+                       <div class="product-name"><a  href="product.html"> {product.name} </a></div>
+                       <div class="product-brand"> {product.brand}</div>
+                       <div class="price"> {product.price}</div>
                        </div>
-                   </li>
-   
-                   <li>
-                       <div className='product'>
-                       <img class="product-image" src="Images/mini-skirt.jpg" alt="product"/>
-                       <div class="product-name"><a  href="product.html">Pleated Skirt</a></div>
-                       <div class="product-brand"> Azuri</div>
-                       <div class="price"> $600</div>
-                       </div>
-                   </li>
-                   <li>
-                       <div className='product'>
-                       <img class="product-image" src="Images/mini-skirt.jpg" alt="product"/>
-                       <div class="product-name"><a  href="product.html">Pleated Skirt</a></div>
-                       <div class="product-brand"> Azuri</div>
-                       <div class="price"> $600</div>
-                       </div>
-                   </li>
-                   <li>
-                       <div className='product'>
-                       <img class="product-image" src="Images/mini-skirt.jpg" alt="product"/>
-                       <div class="product-name"><a  href="product.html">Pleated Skirt</a></div>
-                       <div class="product-brand"> Azuri</div>
-                       <div class="price"> $600</div>
-                       </div>
-                   </li>
-                   <li>
-                       <div className='product'>
-                       <img class="product-image" src="Images/mini-skirt.jpg" alt="product"/>
-                       <div class="product-name"><a  href="product.html">Pleated Skirt</a></div>
-                       <div class="product-brand"> Azuri</div>
-                       <div class="price"> $600</div>
-                       </div>
-                   </li>
+                   </li>)
+                     }
                </ul>
              </div>
          </main>
-   
+         <footer class="footer">
+            All Rights Reserved
+        </footer>
    
            </div>
+           </BrowserRouter>
   );
 }
 
