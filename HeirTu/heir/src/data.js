@@ -20,14 +20,14 @@ export default{
     
     {
         _id:"3",
-        name:'Mini Skirt',
+        name:'Skirt',
         image:'/Images/mini-skirt.jpg',
         price: 600,
         brand:'Azuri',
     },
     {
         _id:"4",
-        name:'Mini Skirt',
+        name:'Short Skirt',
         image:'/Images/mini-skirt.jpg',
         price: 600,
         brand:'Azuri',

@@ -2,8 +2,8 @@ import React from 'react';
 import {BrowserRouter, Route, Link} from 'react-router-dom';
 import './App.css';
 import data from './data';
-import Home from './Components/Home';
-import Product from './Components/Product';
+import Home from './Pages/Home';
+import Product from './Pages/Product';
 
 
 
