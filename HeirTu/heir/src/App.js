@@ -28,7 +28,7 @@ function App() {
                   <button onClick={openMenu}>
                       &#9776;
                   </button>
-                  <Link to='/'> Heir TU</Link>
+                  <Link  to='/'> Heir TU</Link>
               {/* <a href="Home.js">Heir Tu</a>  */}
               </div>
               <div class="header-links">
